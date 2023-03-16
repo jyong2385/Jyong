@@ -7,6 +7,49 @@
     <groupId>com.jyong.flink</groupId>
     <artifactId>Jyong-flink</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.jyong.commons</groupId>
+            <artifactId>Jyong-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--flink-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-scala_2.11</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-elasticsearch7_2.11</artifactId>
+            <version>1.10.1</version>
+
+        </dependency>
+        <!--连接kafka-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka_2.11</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+
+        <!--flink to habse-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-hbase_2.12</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <!--        hbase-->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-it</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
