@@ -1,6 +1,6 @@
 package com.jyong.spring.jyongspring.security;
 
-import com.datawaiter.springboot.config.JDBCConfig;
+import com.jyong.spring.jyongspring.config.JDBCConfig;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

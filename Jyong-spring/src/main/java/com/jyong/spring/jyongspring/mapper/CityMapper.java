@@ -1,6 +1,6 @@
 package com.jyong.spring.jyongspring.mapper;
 
-import com.datawaiter.springboot.entity.CityModel;
+import com.jyong.spring.jyongspring.entity.CityModel;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

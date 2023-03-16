@@ -1,6 +1,6 @@
 package com.jyong.spring.jyongspring.controller;
 
-import com.datawaiter.springboot.entity.StudentModel;
+import com.jyong.spring.jyongspring.entity.StudentModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

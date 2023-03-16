@@ -2,7 +2,7 @@ package com.jyong.flink.basic1;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.jyong.streaming.entity.Person;
+import com.jyong.flink.entity.Person;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.RuntimeContext;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;

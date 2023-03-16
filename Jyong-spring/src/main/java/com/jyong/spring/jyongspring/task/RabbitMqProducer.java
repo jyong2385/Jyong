@@ -5,11 +5,9 @@ import com.alibaba.rocketmq.client.exception.MQClientException;
 import com.alibaba.rocketmq.client.producer.DefaultMQProducer;
 import com.alibaba.rocketmq.common.message.Message;
 import com.alibaba.rocketmq.remoting.exception.RemotingException;
-import com.datawaiter.springboot.config.JmsConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.StandardCharsets;
 
 @Slf4j
 @Component
@@ -26,7 +24,7 @@ public class RabbitMqProducer {
         producer = new DefaultMQProducer(producerGroup);
 
         //绑定name server
-        producer.setNamesrvAddr(JmsConfig.name_server);
+        producer.setNamesrvAddr("");
 
         start();
     }
