@@ -1,4 +1,4 @@
-package com.jyong.flink.basic2;
+package com.jyong.flink.basic;
 
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;

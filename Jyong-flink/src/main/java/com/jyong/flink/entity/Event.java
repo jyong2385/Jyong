@@ -13,6 +13,9 @@ public class Event {
 
     private Long timestamp;
 
+    public Event() {
+    }
+
     public Event(String user, String url, Long timestamp) {
         this.user = user;
         this.url = url;

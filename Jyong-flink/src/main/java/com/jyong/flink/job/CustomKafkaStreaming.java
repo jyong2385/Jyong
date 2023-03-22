@@ -10,7 +10,7 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 
 import java.util.Properties;
 
-public class ConsumnerKafkaStreming {
+public class CustomKafkaStreaming {
     public static void main(String[] args) throws Exception {
 
         Properties kafkaPorperties = new Properties();

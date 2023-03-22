@@ -1,4 +1,4 @@
-package com.jyong.flink.basic1;
+package com.jyong.flink.basic;
 
 import cn.hutool.core.util.StrUtil;
 import org.apache.flink.api.common.functions.MapFunction;

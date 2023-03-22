@@ -1,4 +1,4 @@
-package com.jyong.flink.basic2;
+package com.jyong.flink.basic;
 
 
 import org.apache.commons.lang3.StringUtils;

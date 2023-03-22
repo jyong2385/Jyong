@@ -13,7 +13,7 @@ import org.apache.flink.util.Collector;
  * @description flink消费socker数据
  * @date: 2023/3/17 21:07
  */
-public class FlinkConsumerSocket {
+public class FlinkCustomSocket {
 
     public static void main(String[] args) throws Exception {
 

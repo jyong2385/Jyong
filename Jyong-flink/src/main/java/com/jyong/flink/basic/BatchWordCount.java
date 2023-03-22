@@ -1,7 +1,7 @@
-package com.jyong.flink.demo;
+package com.jyong.flink.basic;
 
 
-import com.jyong.flink.demo.model.Event;
+import com.jyong.flink.entity.Event;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
