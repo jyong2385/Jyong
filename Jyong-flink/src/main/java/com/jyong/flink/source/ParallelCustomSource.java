@@ -1,6 +1,5 @@
-package com.jyong.flink.customsource;
+package com.jyong.flink.source;
 
-import com.jyong.flink.entity.Event;
 import org.apache.flink.streaming.api.functions.source.ParallelSourceFunction;
 
 import java.util.Random;

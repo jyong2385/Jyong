@@ -1,5 +1,6 @@
-package com.jyong.flink.job;
+package com.jyong.flink.source;
 
+import com.jyong.flink.sink.HbaseWriter;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;

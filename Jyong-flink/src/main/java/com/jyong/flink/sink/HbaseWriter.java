@@ -1,4 +1,4 @@
-package com.jyong.flink.job;
+package com.jyong.flink.sink;
 
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;

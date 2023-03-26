@@ -1,4 +1,4 @@
-package com.jyong.flink.job;
+package com.jyong.flink.datafactory;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;

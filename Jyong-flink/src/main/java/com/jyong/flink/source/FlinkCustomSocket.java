@@ -1,4 +1,4 @@
-package com.jyong.flink.job;
+package com.jyong.flink.source;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.tuple.Tuple2;

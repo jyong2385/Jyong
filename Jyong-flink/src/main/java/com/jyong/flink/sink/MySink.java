@@ -1,4 +1,4 @@
-package com.jyong.flink.basic;
+package com.jyong.flink.sink;
 
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 

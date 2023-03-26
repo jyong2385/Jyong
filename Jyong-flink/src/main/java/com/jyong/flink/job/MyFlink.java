@@ -1,6 +1,8 @@
-package com.jyong.flink.basic;
+package com.jyong.flink.job;
 
 import cn.hutool.core.util.StrUtil;
+import com.jyong.flink.sink.MySink;
+import com.jyong.flink.source.MySource;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;

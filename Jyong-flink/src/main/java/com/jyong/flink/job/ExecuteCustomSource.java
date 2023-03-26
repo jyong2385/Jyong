@@ -1,11 +1,9 @@
 package com.jyong.flink.job;
 
-import com.jyong.flink.customsource.ClickSource;
-import com.jyong.flink.customsource.ParallelCustomSource;
+import com.jyong.flink.source.ClickSource;
 import com.jyong.flink.entity.Event;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 /**
  * @author: jyong

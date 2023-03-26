@@ -1,4 +1,4 @@
-package com.jyong.flink.basic;
+package com.jyong.flink.job;
 
 
 import com.jyong.flink.entity.Event;

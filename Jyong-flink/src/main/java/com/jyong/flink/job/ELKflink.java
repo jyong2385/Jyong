@@ -1,4 +1,4 @@
-package com.jyong.flink.basic;
+package com.jyong.flink.job;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;

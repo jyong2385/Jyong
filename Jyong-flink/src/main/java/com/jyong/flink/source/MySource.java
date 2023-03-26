@@ -1,4 +1,4 @@
-package com.jyong.flink.basic;
+package com.jyong.flink.source;
 
 import cn.hutool.core.util.RandomUtil;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;

@@ -1,4 +1,4 @@
-package com.jyong.flink.job;
+package com.jyong.flink.source;
 
 import org.apache.flink.streaming.api.functions.source.RichSourceFunction;
 import org.apache.hadoop.hbase.*;
