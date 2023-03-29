@@ -2,12 +2,12 @@ package com.jyong.flink.job;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.jyong.flink.entity.Person;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.RuntimeContext;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
-import org.apache.flink.shaded.guava18.com.google.common.collect.Lists;
-import org.apache.flink.shaded.guava18.com.google.common.collect.Maps;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -60,6 +60,7 @@ public class ELKflink {
                 return person;
             }
         });
+
         Map<String, String> map = Maps.newHashMap();
         map.put("cluster.name", "my-application");
         List<HttpHost> list = Lists.newArrayList();

@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <flink-version>1.14.4</flink-version>
     </properties>
     <dependencies>
         <dependency>
@@ -22,26 +23,26 @@
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-scala_2.11</artifactId>
-            <version>1.7.2</version>
+            <version>${flink-version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-elasticsearch7_2.11</artifactId>
-            <version>1.10.1</version>
+            <version>${flink-version}</version>
 
         </dependency>
         <!--连接kafka-->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka_2.11</artifactId>
-            <version>1.7.2</version>
+            <version>${flink-version}</version>
         </dependency>
 
         <!--flink to habse-->
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-hbase_2.12</artifactId>
-            <version>1.7.2</version>
+            <artifactId>flink-connector-hbase-1.4_2.11</artifactId>
+            <version>${flink-version}</version>
         </dependency>
         <!--        hbase-->
         <dependency>
@@ -49,7 +50,33 @@
             <artifactId>hbase-it</artifactId>
             <version>1.1.2</version>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>org.apache.bahir</groupId>
+            <artifactId>flink-connector-redis_2.11</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients_2.11</artifactId>
+            <version>${flink-version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-jdbc_2.11</artifactId>
+            <version>${flink-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+
+    </dependencies>
 
 </project>

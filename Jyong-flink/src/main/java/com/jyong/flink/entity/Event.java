@@ -1,11 +1,13 @@
 package com.jyong.flink.entity;
 
+import java.io.Serializable;
+
 /**
  * @author: jyong
  * @description 数据事件流
  * @date: 2023/3/17 21:00
  */
-public class Event {
+public class Event implements Serializable {
 
     private String user;
 
