@@ -44,7 +44,7 @@ public class WindowAggregatePvUvExample {
 
         eventDataStreamSource.print("data > ");
         //4.所有数据放在一起统计
-        SingleOutputStreamOperator<Double> outputStreamOperator = eventDataStreamSource.keyBy(event -> true).window(TumblingEventTimeWindows.of(Time.milliseconds(10))).aggregate(new CustomAggregateFuntion());
+        SingleOutputStreamOperator<Double> outputStreamOperator = eventDataStreamSource.keyBy(event -> true).window(TumblingEventTimeWindows.of(Time.milliseconds(10))).aggregate(new CustomAggregateFunction());
 
         outputStreamOperator.print("result->");
         //5.触发执行
@@ -58,7 +58,7 @@ public class WindowAggregatePvUvExample {
      * 用Long类型值保存pv
      * 用hashset做uv去重
      */
-    private static class CustomAggregateFuntion implements AggregateFunction<Event, Tuple2<Long, HashSet<String>>, Double> {
+    private static class CustomAggregateFunction implements AggregateFunction<Event, Tuple2<Long, HashSet<String>>, Double> {
 
         @Override
         public Tuple2<Long, HashSet<String>> createAccumulator() {
