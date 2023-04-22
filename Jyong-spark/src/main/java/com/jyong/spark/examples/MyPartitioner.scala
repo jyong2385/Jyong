@@ -1,6 +1,9 @@
 package com.jyong.spark.examples
 
-import java.sql.Array
+
+import org.apache.spark.rdd.RDD
+import org.apache.spark.{Partitioner, SparkConf, SparkContext}
+
 import scala.collection.mutable.ListBuffer
 
 object MyPartitioner {
