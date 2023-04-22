@@ -33,7 +33,6 @@ public class SparkWriteMysqlUpdate {
         rows.add(RowFactory.create(3, "c"));
         rows.add(RowFactory.create(4, "c"));
 
-
         //创建dataframe
         Dataset<Row> dataFrame = sparkSession.createDataFrame(rows, DataTypes.createStructType(structFields));
 
