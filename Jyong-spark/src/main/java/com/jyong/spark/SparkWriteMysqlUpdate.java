@@ -3,7 +3,6 @@ package com.jyong.spark;
 import org.apache.spark.sql.*;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
-import scala.math.Ordering;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,7 @@ public class SparkWriteMysqlUpdate {
 
 
 
-    public static void main(Ordering.String[] args) {
+    public static void main(String[] args) {
 
         //创建session
         SparkSession sparkSession = SparkSession.builder().master("local[*]").appName("wirte_mysql").getOrCreate();
