@@ -16,6 +16,7 @@ import java.util.List;
 public class SparkWriteMysqlUpdate {
 
 
+
     public static void main(Ordering.String[] args) {
 
         //创建session
