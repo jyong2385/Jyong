@@ -26,6 +26,7 @@ public class SparkWriteMysqlUpdate {
         structFields.add(DataTypes.createStructField("id", DataTypes.IntegerType, true));
         structFields.add(DataTypes.createStructField("name", DataTypes.StringType, true));
 
+
         //创建数据rows
         List<Row> rows = new ArrayList<>();
         rows.add(RowFactory.create(1, "a"));
