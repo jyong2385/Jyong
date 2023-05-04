@@ -9,7 +9,7 @@ object StringDemo {
 
   def main(args: Array[String]): Unit = {
     val list = List("a","b","c")
-
+    println(list)
   }
   def quoteIdentifier(colName: String): String = {
     println(colName)
