@@ -1,6 +1,7 @@
 package com.jyong.flink.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 /**
  * @author: jyong
@@ -53,7 +54,7 @@ public class Event implements Serializable {
         return "Event{" +
                 "user='" + user + '\'' +
                 ", url='" + url + '\'' +
-                ", timestamp=" + timestamp +
+                ", timestamp=" + new Timestamp(timestamp) +
                 '}';
     }
 }

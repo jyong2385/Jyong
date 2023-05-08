@@ -67,7 +67,7 @@ public class BillCheckExample {
                 //定时器
                 .process(new OrderMatchResult())
                 .print();
-        ;
+
 
 
         env.execute();
