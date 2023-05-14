@@ -34,12 +34,15 @@ public class FlinkStateExample {
 
 
         //3.引入数据源
-        DataStream<Event> eventDataStreamSource = env.addSource(new ClickSource()).assignTimestampsAndWatermarks(WatermarkStrategy.<Event>forBoundedOutOfOrderness(Duration.ZERO).withTimestampAssigner(new SerializableTimestampAssigner<Event>() {
-            @Override
-            public long extractTimestamp(Event element, long recordTimestamp) {
-                return element.getTimestamp();
-            }
-        }));
+        DataStream<Event> eventDataStreamSource = env.addSource(new ClickSource())
+                .assignTimestampsAndWatermarks(
+                        WatermarkStrategy.<Event>forBoundedOutOfOrderness(Duration.ZERO)
+                                .withTimestampAssigner(new SerializableTimestampAssigner<Event>() {
+                                    @Override
+                                    public long extractTimestamp(Event element, long recordTimestamp) {
+                                        return element.getTimestamp();
+                                    }
+                                }));
 
         //4.处理
         eventDataStreamSource.keyBy(data -> data.getUser()).flatMap(new MyFlatMap()).print();
@@ -131,7 +134,7 @@ public class FlinkStateExample {
 
 
             //状态清除，在一定条件下，将状态进行初始化到最初状态
-            if(value.getUser() == null){
+            if (value.getUser() == null) {
                 mapState.clear();
             }
 
