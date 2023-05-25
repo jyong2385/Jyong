@@ -20,7 +20,7 @@ public class BatchWordCount {
 
         //1.从文件中读取
 
-        String path="D:\\codding\\Datawaiter\\Datawaiter-Flink-Streaming\\src\\main\\resources\\clicks";
+        String path="D:\\codding\\Datawaiter\\Datawaiter-Flink-Streaming\\src\\main\\resources\\clicks.txt";
         DataStreamSource<String> fileStreamSource = env.readTextFile(path);
 
         //2.从集合中读取

@@ -38,7 +38,7 @@ public class SinkToJDBC {
             }
         };
 
-        String operator_sql = "insert into clicks(user,url) values(?,?)";
+        String operator_sql = "insert into clicks.txt(user,url) values(?,?)";
         eventDataStreamSource.addSink(JdbcSink.sink(operator_sql, jdbcStatementBuilder, connectorOptions));
 
         //4.触发
