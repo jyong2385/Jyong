@@ -30,7 +30,6 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-elasticsearch7_${scala-version}</artifactId>
             <version>${flink-version}</version>
-
         </dependency>
         <!--连接kafka-->
         <dependency>
@@ -108,6 +107,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
             <version>1.20</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-cep_${scala-version}</artifactId>
+            <version>${flink-version}</version>
         </dependency>
 
 
