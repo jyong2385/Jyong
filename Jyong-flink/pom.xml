@@ -12,7 +12,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <flink-version>1.13.6</flink-version>
-        <scala-version>2.11</scala-version>
+        <scala-version>2.12</scala-version>
     </properties>
     <dependencies>
         <dependency>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.apache.bahir</groupId>
             <artifactId>flink-connector-redis_${scala-version}</artifactId>
-            <version>1.0</version>
+            <version>1.1.0</version>
         </dependency>
 
         <dependency>
