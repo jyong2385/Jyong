@@ -44,13 +44,14 @@ public class UserViewCountAnalysis {
         //3.转换为POJO,分配事件戳和watermark
         SingleOutputStreamOperator<UserBehavior> dataStream = inputDataStream.map(data -> {
             String[] split = data.split(",");
-
             return new UserBehavior(Long.parseLong(split[0]), Long.parseLong(split[1]), Integer.parseInt(split[2]), split[3], Long.parseLong(split[4]));
         }).assignTimestampsAndWatermarks(WatermarkStrategy.<UserBehavior>forBoundedOutOfOrderness(Duration.ofSeconds(1))
                 .withTimestampAssigner(new SerializableTimestampAssigner<UserBehavior>() {
                     @Override
                     public long extractTimestamp(UserBehavior userBehavior, long l) {
+
                         return userBehavior.getTimestamp() * 1000;
+
                     }
                 })
         );
@@ -78,6 +79,7 @@ public class UserViewCountAnalysis {
                             set.add(value.getUserId());
                         }
                         out.collect(new UserViewCount("uv", window.getEnd(), (long) set.size()));
+
                     }
                 });
 
