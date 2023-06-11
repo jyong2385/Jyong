@@ -136,7 +136,7 @@ public class HotItems {
     }
 
     //自定义全窗口函数
-    public static class WindowItemCountResult implements WindowFunction<Long, ItemViewCount, Long, TimeWindow> {
+    private static class WindowItemCountResult implements WindowFunction<Long, ItemViewCount, Long, TimeWindow> {
 
         @Override
         public void apply(Long itemId, TimeWindow timeWindow, Iterable<Long> iterable, Collector<ItemViewCount> collector) throws Exception {
@@ -147,7 +147,7 @@ public class HotItems {
     }
 
     //实现自定义聚合函数
-    public static class ItemCountAgg implements AggregateFunction<UserBehavior, Long, Long> {
+    private static class ItemCountAgg implements AggregateFunction<UserBehavior, Long, Long> {
         @Override
         public Long createAccumulator() {
             return 0L;
