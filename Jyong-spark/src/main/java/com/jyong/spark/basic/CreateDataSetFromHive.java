@@ -16,7 +16,8 @@ public class CreateDataSetFromHive {
 
 //        com.jyong.scala.com.jyong.scala.spark.sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING) USING hive");
 //        com.jyong.scala.com.jyong.scala.spark.sql("LOAD DATA LOCAL INPATH 'examples/src/main/resources/kv1.txt' INTO TABLE src");
-        Dataset<Row> sql = spark.sql("SELECT * FROM src");
-//                sql.show();
+        
+        Dataset<Row> sql = spark.sql("SELECT regexp_extract('{a:1,b:3,app_name:lisi,age:11}', 'app_name:([^,]+)', 1) AS app_name ");
+                sql.show();
     }
 }
