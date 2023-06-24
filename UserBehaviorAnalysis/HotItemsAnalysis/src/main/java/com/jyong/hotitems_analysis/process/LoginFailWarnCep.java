@@ -75,20 +75,7 @@ public class LoginFailWarnCep {
                     public boolean filter(UserLoginInfo userLoginInfo) throws Exception {
                         return "fail".equalsIgnoreCase(userLoginInfo.getStatus());
                     }
-                }).next("second")
-                .where(new SimpleCondition<UserLoginInfo>() {
-                    @Override
-                    public boolean filter(UserLoginInfo userLoginInfo) throws Exception {
-                        return "fail".equalsIgnoreCase(userLoginInfo.getStatus());
-                    }
-                })
-                .next("third")
-                .where(new SimpleCondition<UserLoginInfo>() {
-                    @Override
-                    public boolean filter(UserLoginInfo userLoginInfo) throws Exception {
-                        return "fail".equalsIgnoreCase(userLoginInfo.getStatus());
-                    }
-                })
+                }).times(3)
                 .within(Time.seconds(3));
 
 
@@ -99,8 +86,8 @@ public class LoginFailWarnCep {
                     @Override
                     public UserLoginResult select(Map<String, List<UserLoginInfo>> map) throws Exception {
                         //获取第2次失败的信息
-                        UserLoginInfo first = map.get("first").iterator().next();
-                        UserLoginInfo third = map.get("third").iterator().next();
+                        UserLoginInfo first = map.get("first").get(0);
+                        UserLoginInfo third = map.get("first").get(2);
 
                         return new UserLoginResult(first.getUserId(),first.getTimestamp(),third.getTimestamp(),3);
                     }
