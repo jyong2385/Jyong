@@ -57,6 +57,15 @@ public class OrderLogModel {
         return timestamp;
     }
 
+
+    public String getTxId() {
+        return txId;
+    }
+
+    public void setTxId(String txId) {
+        this.txId = txId;
+    }
+
     public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
