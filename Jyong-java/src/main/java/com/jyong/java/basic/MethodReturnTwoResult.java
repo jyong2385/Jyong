@@ -11,19 +11,15 @@ import org.apache.commons.lang3.tuple.MutablePair;
 public class MethodReturnTwoResult {
 
     public static void main(String[] args) {
-
         MutablePair<String, String> result = getResult();
-
         System.out.println("left: "+result.getLeft());
         System.out.println("right: "+result.getRight());
-
-
     }
 
     public static MutablePair<String,String> getResult(){
-        MutablePair<Object, Object> mutablePair = new MutablePair<>();
-        return new MutablePair<>("left-value","right-value");
+        MutablePair<String,String> mutablePair = new MutablePair<>();
+        mutablePair.setLeft("left-value");
+        mutablePair.setRight("right-value");
+        return mutablePair;
     }
-
-
 }
